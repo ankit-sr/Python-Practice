@@ -25,3 +25,15 @@ def increaseAge(age):
 age = 15
 newAge = increaseAge(age)
 print(newAge)
+
+# even a function can return more than one element
+def capitalizeNameIncreaseAge(name, age):
+    name = name.upper()
+    age = age + 10
+
+    return name, age
+
+name = 'Ankit'
+age = 20
+name, age = capitalizeNameIncreaseAge(name, age)
+print(name + " " + str(age))
