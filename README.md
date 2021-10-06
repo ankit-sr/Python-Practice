@@ -3,4 +3,5 @@ This repository contains the practice code of python with proper notes as commen
 
 - [List](list.py)
 - [Tuple](tuple.py)
+- [Functions](function.py)
 
