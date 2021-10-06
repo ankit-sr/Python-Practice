@@ -6,8 +6,13 @@
     on our convenience.
 '''
 
-names = ('ankit', 'prateek', 'sushant')
+names = ('ankit', 'prateek', 'sushant' , 12 , True, False, ['abc', 24], (15, 8))
 
 # accessing elements of tuples using their indexes
-print(names[0] + names[1] + names[3])
+print(names[0] + names[1] + names[2])
 
+# count() - returns the number of time the given element is present in the tuple
+print(names.count('prateek'))
+
+# index() - returns the index of the element in the tuple, else gives ValueError: element not in the tuple
+print(names.index(True))
