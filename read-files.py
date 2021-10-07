@@ -30,7 +30,7 @@ try:
     for line in file.readlines():
         print(line)
 
-except exception as e:
+except Exception as e:
     print(e)
 
 finally:
