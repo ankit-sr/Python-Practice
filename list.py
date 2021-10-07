@@ -55,3 +55,28 @@ names.pop()
 names.clear()
 
 print(names)
+
+
+
+''' 
+    We can also create 2-D lists, where each element of a list is a list itself.
+'''
+
+people = [
+    ['Prateek', 'Sushant', 'Vardhan'],
+    ['Goutam', 'Gaurav', 'Rajput'],
+    [21, 20]
+]
+
+print(people)
+
+# accessing the elements - we use two square brackets
+print( str(people[0][0]) +' '+ str(people[1][2]) +' '+ str(people[2][1]) )
+
+# all methods discussed above are applicable on 2-D list
+
+# using for-loop to access all list items one-by-one
+# we are considering each list as a row, and each item in that list(row) as a col
+for row in people:
+    for col in row:
+        print(col)
