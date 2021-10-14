@@ -25,7 +25,7 @@ class Distance:
         feet = self.feet + other.feet 
         inch = self.inch + other.inch
         if inch>=12:
-            feet += int(inch/12)
+            feet += int(inch/12)    # or feet += inch//12 (floor division)
             inch = inch%12
 
         distance = Distance(feet, inch)
