@@ -42,3 +42,19 @@ try:
 
 except Exception as err:
     print(err)
+
+
+# we also have a finlly block in pyhton, the code written in finally block
+# always get executed whether there is an exception or not.
+
+try:
+    x = int(input('Enter the value : '))
+    if(x < 0):
+        raise Exception('The number can not be negative')
+    print(x)
+
+except Exception as err:
+    print(err)
+
+finally:
+    print('Finally block executed')
