@@ -13,10 +13,11 @@ except:
     print('Invalid input')
 
 # the above except, handles all types of exceptions and will execute same code
+# but the problem is we can never know the type of exception
 # we can explicitly define the except block for specific error
 
 try:
-    a = 10/0
+    # a = 10/0
     x = int(input('Enter the value : '))
     print(x)
 
@@ -26,5 +27,18 @@ except ZeroDivisionError as err:
 except ValueError as err:
     print(err)
 
-except:
-    print('some error occured')     # we can still define an except block for all errors
+except Exception as e:
+    print(e)     # we can still define an except block for all errors
+
+
+# the user can himself raise an exception in certain conditions 
+# using 'raise' keyword.
+
+try:
+    x = int(input('Enter the value : '))
+    if(x < 0):
+        raise Exception('The number can not be negative')
+    print(x)
+
+except Exception as err:
+    print(err)
