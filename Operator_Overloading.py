@@ -25,7 +25,7 @@ class Distance:
         feet = self.feet + other.feet 
         inch = self.inch + other.inch
         if inch>=12:
-            feet += 1
+            feet += int(inch/12)
             inch = inch%12
 
         distance = Distance(feet, inch)
@@ -33,7 +33,7 @@ class Distance:
 
 
 distance1 = Distance(5, 11)
-distance2 = Distance(6, 3)
+distance2 = Distance(6, 32)
 
 distance3 = distance1 + distance2
 # this line of code means: distance3 = distance1.__add__(distance2)
