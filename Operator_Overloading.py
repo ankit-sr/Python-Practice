@@ -9,6 +9,15 @@
     How to achieve operator overloading?
     Every operator have a method associated with it, such as the functionality of + operator is written in
     __add__ () method, and we can change the definition of this operator to achieve our task.
+    Other methods are : 
+            Addition :      +   __add__()
+            Subtraction:    -   __sub__()
+            Multiplication: *   __mul__() 
+            Power:         **   __pow__()
+            Division:       /   __truediv__()
+            FloorDivision:  //  __floordiv__()
+            Remainder:      %   __mod__()   
+            and mony more for comparison, shorthand(-=, +=,...) operators   
 '''
 
 
@@ -31,6 +40,10 @@ class Distance:
         distance = Distance(feet, inch)
         return distance
 
+    # below method is the overloading of == operator
+    def __eq__(self, other):
+        return ( (self.feet*12 + self.inch) == (other.feet*12 + other.inch) )
+
 
 distance1 = Distance(5, 11)
 distance2 = Distance(6, 32)
@@ -38,8 +51,11 @@ distance2 = Distance(6, 32)
 distance3 = distance1 + distance2
 # this line of code means: distance3 = distance1.__add__(distance2)
 # so distance1 reference serve as self, and distance2 is passed as other.
-
 print(distance3)
+
+isequal = (distance1 == distance2)
+print(isequal)
+
 
 
 '''
@@ -55,4 +71,14 @@ print(distance3)
             self.inch += other
 
         if inch>=12     .......
+
+
+    Here also the associativity does not hold good meaning 10+distance is not same as distance+10
+    and will give TypeError.
+    To overcome this situation, we have reflected operators, which start with 'r'
+    For example:        reflected addition:     __radd__()
+                        reflected subtraction:  __rsub__()
+    now, 'distance + 10' will call __add__() while
+    '10 + distance' will call __radd__(), here also self will be the object of the current class and other will be
+    the object of another class.
 '''
