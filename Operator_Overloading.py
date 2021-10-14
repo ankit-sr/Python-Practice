@@ -40,3 +40,19 @@ distance3 = distance1 + distance2
 # so distance1 reference serve as self, and distance2 is passed as other.
 
 print(distance3)
+
+
+'''
+    The above code can not work with other data types apart from Distance, as it will raise AttributeError'
+    For eg. distance1 + 10  will give AttributeError as feet and inch are not attributes of int class
+    We can overcome using
+
+    def __add__(self, other):
+        if isinstance(other, Distance):
+            ...above written code
+        else:
+            self.feet += other
+            self.inch += other
+
+        if inch>=12     .......
+'''
