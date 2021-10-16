@@ -12,7 +12,7 @@
 '''
 
 # Importing the database module
-import sqlite3
+import sqlite3 as sq
 
 conn = None
 
@@ -37,7 +37,23 @@ try :
     '''
     cur.execute(query)
 
-except Exception as e:
+    # query to insert data into created table
+    insert_query = '''
+        INSERT INTO students(name, course) VALUES
+        ( 'Ankit', 'CSE' ),
+        ( 'Prateek', 'CSE' ),
+        ( 'Sushant', 'CSE' );
+    '''
+    cur.execute(insert_query)
+
+    # getting the row count inserted in the table
+    print(cur.rowcount)
+
+    # commiting changes to the database.
+    conn.commit()
+
+
+except sq.DatabaseError() as e:
     print(e)
 
 finally:
