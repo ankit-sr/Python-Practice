@@ -12,7 +12,7 @@
 '''
 
 # Importing the database module
-import sqlite3 as sq
+import sqlite3
 
 conn = None
 
@@ -53,7 +53,7 @@ try :
     conn.commit()
 
 
-except sq.DatabaseError() as e:
+except sqlite3.DatabaseError() as e:
     print(e)
 
 finally:
