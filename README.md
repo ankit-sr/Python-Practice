@@ -1,9 +1,13 @@
 # Python-Practice
 This repository contains the practice code of python with proper notes as comments.
 
+The content in this README file is not arranged alphabetically, instead it is a roadmap
+to learn python for beginners.
+
 - [List](list.py)
 - [Tuple](tuple.py)
 - [Dictionaries](dictionaries.py)
+- [Set](set.py)
 - [Functions](function.py)
 - [Conditionals](conditionals.py)
 - [While Loop](while_loop.py)
